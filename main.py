@@ -11,7 +11,6 @@ def selecciona_pokemon(pokemons):
             print(f'{pokemon} "HP" {pokemons[pokemon].stats["hp"]} "Velocidad" {pokemons[pokemon].stats["velocidad"]} "Ataque" {pokemons[pokemon].stats["ataque"]} "defensa" {pokemons[pokemon].stats["defensa"]}')
         pokemon = input("Seleccion:")
         exist = ataque_exist(pokemon)
-        print(exist)
     return pokemons[pokemon]
 
 def crear_jugador():
