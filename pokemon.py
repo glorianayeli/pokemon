@@ -27,8 +27,6 @@ class Pokemon:
     self.fortalezas = fortalezas
     self.ataques = ataques
   
-  print("acero" in tipos_pokemon["agua"]["resistencias"])
-
   def centro_pokemon(self):
     self.current_stats = self.stats
 
@@ -36,7 +34,7 @@ class Pokemon:
     ataque_exist = lambda self, ataque : not ataque in self.ataques
     exist = True
     while exist:
-      print(f'Selecciona un ataque:')
+      print(f'\nSelecciona un ataque:')
       for ataque in self.ataques:
         print(f"{ataque} tipo: {self.ataques[ataque]['tipo']} poder:{self.ataques[ataque]['poder']}")
       ataque = input('Ingresa el ataque:')
