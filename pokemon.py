@@ -1,3 +1,6 @@
+from os import system
+from os import system
+
 tipos_pokemon = {
   "agua": {
     "resistencias":["acero", "agua", "hielo", "fuego"],
@@ -34,6 +37,7 @@ class Pokemon:
     ataque_exist = lambda self, ataque : not ataque in self.ataques
     exist = True
     while exist:
+      system("cls")
       print(f'\nSelecciona un ataque:')
       for ataque in self.ataques:
         print(f"{ataque} tipo: {self.ataques[ataque]['tipo']} poder:{self.ataques[ataque]['poder']}")
@@ -88,6 +92,7 @@ class Pokemon:
     # combate por turnos
     while (self.current_stats["hp"] > 0) & (rival.current_stats["hp"] > 0):
       if mi_turno:
+        system("cls")
         #seleccionar ataque 
         poder = self.selecciona_ataque()
         poder_total = poder["poder"]
@@ -102,6 +107,7 @@ class Pokemon:
         print(f"{self.especie} hizo {dano} de daño a {rival.especie}")
         print(f"A {rival.especie} le quedan {rival.current_stats['hp']} puntos de vida")
       else:
+        system("cls")
         # defendiendo
         # seleccionar ataque
         poder = rival.selecciona_ataque()

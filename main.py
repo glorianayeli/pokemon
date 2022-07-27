@@ -1,5 +1,6 @@
 from pokemon import Pokemon
 from user import User
+from os import system
 
 def selecciona_pokemon(pokemons):
     exist = True
@@ -18,6 +19,7 @@ def crear_jugador():
     return User(jugador_nombre)
 
 def bienvenida(name):
+    system("cls")
     print(f'\n Hola {name} estas apunto de comenzar una increible aventura')
 
 #declarar jugadores
